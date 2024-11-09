@@ -36,6 +36,7 @@ MIDI
 - Assign bitmap standard (XG, SC-55, TG300)
 - Stores the current port name in use, in case of a disconnect, then refreshes the connection and opens the port if device reconnects.
 
+<pre>
 Default Keymap:
 (currently implemented)
 
@@ -61,4 +62,4 @@ MIDI functions:
          ENTER : Transmit pixels in current frame.
    SHIFT+ENTER : Toggle MIDI pixel mirror— this transmits all pixel/frame changes to device in real-time. (wacom mode)
    SHIFT+SPACE : Toggle MIDI timeline mirror— transmits only timeline output to device as it plays.
-   
+   </pre>
