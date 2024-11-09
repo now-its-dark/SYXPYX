@@ -3,7 +3,9 @@ One of the coolest and most overlooked features of various sound modules produce
 
 This is an attempt to create the tool I was looking for.. the one that was never made when these devices were contemporary, basically a wacom and legitimate animation editor for MIDI devices.
 
-My guess, is that the main reason why very few people bothered with this capability (or at least not in much depth), is because it's inconvenient to actually create this data, especially in terms of animation. Not that it is technically complicated, but because a tool wasn't available to allow for a reasonably fluid creative workflow, as it should have been from the start. Perhaps this is because the people who would be most attracted to the possibility of making pixel art for their MIDIs aren't programmers, but visual artists and designers, like me. So, I made an LLM program it for me lol. 
+My guess, is that the main reason why very few people bothered with this capability (or at least not in much depth), is because it's inconvenient to actually create this data, especially in terms of animation. Not that it is technically complicated, but because a tool wasn't available to allow for a reasonably fluid creative workflow, (as it should have been from the start). 
+
+Perhaps this dearth of usable tools was due to the fact that the people who would be most attracted to the possibility of making pixel art for their MIDIs aren't programmers, but visual artists and designers, like me. So, I made an LLM program it for me lol. 
 
 This tool is made possible by the RTMidi library for Godot!
 
