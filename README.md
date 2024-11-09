@@ -24,6 +24,7 @@ Drawing:
 - Display real-time (persistently show any changes immediately on device, including frame changes)
   
 Animation:
+- Play and pause the timeline.
 - New frame after current.
 - New frame at end of timeline.
 - Duplicate current frame.
