@@ -68,6 +68,7 @@ MIDI functions:
 
 
 What I intend for this to do in the future:
+
 UI
 - An actual, properly conceived GUI, with all functions available using coherent iconography.
 - Auto adjustment for pixel size / aspect ratio, depending on the current device type (for example, TG300 has nearly square pixels, while XG devices mostly have double-width).
