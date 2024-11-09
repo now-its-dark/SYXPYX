@@ -1,7 +1,7 @@
 # SYXPYX
 One of the coolest and most overlooked features of various sound modules produced by Korg, Roland and Yamaha, is their ability to display bitmap / pixel data.
 
-This is an attempt to create the tool I was looking for.. the one that was never made when these devices were contemporary, something that behaves like a wacom, with decent animation editing functions. I got a lot of help from LLMs to make it, as my experience with Godot is limited rn, but the code is structured in a pretty modular way.
+This is an attempt to create the tool I was looking for.. the one that was never made when these devices were contemporary, something that behaves like a wacom, with decent animation editing functions. 
 
 My guess, is that the main reason why very few people bothered with this capability (or not in much depth), is due to the inconvenience in creating compatible data, particularly for animation. It isn't a technically complex proposition, but it has never been accessible via the sort of tool which one would generally employ for creating these kinds of visual assets.
 
@@ -10,7 +10,7 @@ If you want to try it out, you'll need to grab this extension and place it in th
 
 Current Status
 
-The tool is in a pretty stable alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. I've made an effort to squash any bugs that appeared, so it is generally usable, within the limits of the current featureset.
+The tool is in a pretty stable alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. I've made an effort to squash any bugs that appeared, so it is generally usable, within the limits of the current featureset. I got a lot of help from LLMs to make it, as my experience with Godot is limited rn, but the code is structured in a pretty modular way.
 
 Limitations / High-priority features that it lacks at the moment
 
