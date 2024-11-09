@@ -67,12 +67,20 @@ MIDI functions:
    </pre>
 
 
-What I intend for this to do in the future:
+What I intend/hope for this to do in the future:
 
 UI
 - An actual, properly conceived GUI, with all functions available using coherent iconography.
 - Auto adjustment for pixel size / aspect ratio, depending on the current device type (for example, TG300 has nearly square pixels, while XG devices mostly have double-width).
 - Assign background color, depending on device type. (Green / Orange / other??).
+
+Editor Tools:
+- Shift Pixels in a direction on X & Y axis, with and without wrapping
+- Flood fill tool
+- Invert tool (current frame or all frames)
+- Layers
+- Layer timeline properties (eg. set one layer to run at 4 FPS, while another runs as 15)
+- Layer Effects (nothing that fancy, but maybe auto-outline a higher layer, to always ensure distinction from lower ones)
   
 File handling:
 - Import/Export GIF
@@ -86,6 +94,11 @@ MIDI Control:
 - Velocity Shift — Switch current frame from frame 1->last available frame, dependent on note velocity. (scale velocity across total number of frames)
 - Some other, less clearly formed ideas.
 - MIDI 2.0 CI profile, so anything can see its capabilties in ze pixels, cuz fuck yeah.
+
+Visualizers:
+- Map shaders to pixel grid; would allow for easy use of dithering algorithms and live inputs, such as from a webcam.
+- Virtual audio device receiver + spectrum analyzer to display audio frequency information from the device.
+- Region activation - display activity state for individual notes, for things like drum sounds, which are not represented on the device ordinarily.
 
 Optimization:
 - Right now, it just sends the entire message every time. This is not necessary, as pixels can be transmitted discretely, but it's additional logic that doesn't exist yet. Partly, because there is a balance to be struck— if numerous single pixel changes must transmitted, it could end up being less efficient in some cases, due to the additional bytes needed to setup the message.
