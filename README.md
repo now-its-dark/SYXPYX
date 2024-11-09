@@ -11,6 +11,12 @@ This tool is made possible by [NullMember's port of the RTMidi library for Godot
 
 Currently, the tool is in a stable, alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. It works well, within the limited functions currently present.
 
+What is *missing...*
+
+- Any form of file handling
+- MIDI input
+- A decent UI design
+
 What works:
 
 User input:
@@ -39,12 +45,6 @@ MIDI
 - Assign MIDI output port (app will refresh when new ports appear on the system)
 - Assign bitmap standard (XG, SC-55, TG300)
 - Stores the current port name in use, in case of a disconnect, then refreshes the connection and opens the port if device reconnects.
-
-What is *missing...*
-
-- Any form of file handling
-- MIDI input
-- A decent UI design
 
 <pre>
 Default Keymap:
