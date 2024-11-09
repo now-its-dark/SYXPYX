@@ -1,25 +1,24 @@
 # SYXPYX
 One of the coolest and most overlooked features of various sound modules produced by Korg, Roland and Yamaha, is their ability to display bitmap / pixel data.
 
-This is an attempt to create the tool I was looking for.. the one that was never made when these devices were contemporary, basically a wacom and legitimate animation editor for MIDI devices.
+This is an attempt to create the tool I was looking for.. the one that was never made when these devices were contemporary, something that behaves like a wacom, with decent animation editing functions.
 
-My guess, is that the main reason why very few people bothered with this capability (or at least not in much depth), is because it's inconvenient to actually create this data, especially in terms of animation. Not that it is technically complicated, but because a tool wasn't available to allow for a reasonably fluid creative workflow, (as it should have been from the start). 
+My guess, is that the main reason why very few people bothered with this capability (or not in much depth), is due to the inconvenience in creating compatible data, particularly for animation. It isn't a technically complex proposition, but it has never been accessible via the sort of tool which one would generally employ for creating these kinds of visual assets.
 
-Perhaps this dearth of usable tools was due to the fact that the people who would be most attracted to the possibility of making pixel art for their MIDIs aren't programmers, but visual artists and designers, like me. So, I made an LLM program it for me lol. 
+This tool uses [NullMember's port of the RTMidi library for Godot](https://github.com/NullMember/godot-rtmidi/releases)!
+If you want to try it out, you'll need to grab this extension and place it in the project folder, as described in their repo. I'll link it properly to this repo at some point.
 
-This tool is made possible by [NullMember's port of the RTMidi library for Godot](https://github.com/NullMember/godot-rtmidi/releases)!
+Current Status
 
-If you want to try this, you'll need to grab their extension and place it in the project folder, as described in their repo.
+The tool is in a stable, alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. It works well, within the limited functions currently present.
 
-Currently, the tool is in a stable, alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. It works well, within the limited functions currently present.
-
-What is *missing...*
-
+Limitations
+In terms of high-priority features, it currently lacks
 - Any form of file handling
 - MIDI input
-- A decent UI design
+- Decent UI design
 
-What works:
+Available functions
 
 User input:
 Mostly keyboard-based, other than for drawing operations— nearly every function has an associated key command, which can be reassigned via the native key mapping in Godot.
@@ -77,14 +76,14 @@ MIDI functions:
    </pre>
 
 
-What I intend/hope for this to do in the future:
+Planned Future additions
 
 UI
 - An actual, properly conceived GUI, with all functions available using coherent iconography.
 - Auto adjustment for pixel size / aspect ratio, depending on the current device type (for example, TG300 has nearly square pixels, while XG devices mostly have double-width).
 - Assign background color, depending on device type. (Green / Orange / other??).
 
-Editor Tools:
+Editor Tools
 - Shift Pixels in a direction on X & Y axis, with and without wrapping
 - Flood fill tool
 - Invert tool (current frame or all frames)
@@ -92,23 +91,23 @@ Editor Tools:
 - Layer timeline properties (eg. set one layer to run at 4 FPS, while another runs as 15)
 - Layer Effects (nothing that fancy, but maybe auto-outline a higher layer, to always ensure distinction from lower ones)
   
-File handling:
+File handling
 - Import/Export GIF
 - Import/Export images & image sequences in various formats
 - Import/Export .syx containing bitmap messages
 - Export timed MIDI data, with *separate* settings for FPS and BPM.
   
-MIDI Control:
+MIDI Control
 - Trigger on Note — on an instantiated virtual MIDI port, map received MIDI note input to corresponding frame number and display it.
 - Shift pixels — on MIDI CC, move and wrap current pixels on X or Y axis in either direction.
 - Velocity Shift — Switch current frame from frame 1->last available frame, dependent on note velocity. (scale velocity across total number of frames)
 - Some other, less clearly formed ideas.
-- MIDI 2.0 CI profile, so anything can see its capabilties in ze pixels, cuz fuck yeah.
+- MIDI 2.0 CI profile.
 
-Visualizers:
+Visualizers
 - Map shaders to pixel grid; would allow for easy use of dithering algorithms and live inputs, such as from a webcam.
 - Virtual audio device receiver + spectrum analyzer to display audio frequency information from the device.
 - Region activation - display activity state for individual notes, for things like drum sounds, which are not represented on the device ordinarily.
 
-Optimization:
-- Right now, it just sends the entire message every time. This is not necessary, as pixels can be transmitted discretely, but it's additional logic that doesn't exist yet. Partly, because there is a balance to be struck— if numerous single pixel changes must transmitted, it could end up being less efficient in some cases, due to the additional bytes needed to setup each message.
+Optimization
+Right now, it just sends the entire pixel message every time, overwriting everything in the device's pixel buffer. This is not necessary, as pixels can be transmitted discretely, but it's additional logic that doesn't exist yet. Partly, because there is a balance to be struck— if numerous single pixel changes must transmitted, it could end up being less efficient in some cases, as the additional bytes needed to setup each message could offset the reduction gained.
