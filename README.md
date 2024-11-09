@@ -45,7 +45,7 @@ What is *missing...*
 - Any form of file handling
 - MIDI input
 - A decent UI design
-- 
+
 <pre>
 Default Keymap:
 (currently implemented)
