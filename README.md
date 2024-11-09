@@ -7,7 +7,7 @@ My guess, is that the main reason why very few people bothered with this capabil
 
 Perhaps this dearth of usable tools was due to the fact that the people who would be most attracted to the possibility of making pixel art for their MIDIs aren't programmers, but visual artists and designers, like me. So, I made an LLM program it for me lol. 
 
-This tool is made possible by [NullMember's port of the RTMidi library for Godot](https://github.com/NullMember/godot-rtmidi/releases))!
+This tool is made possible by [NullMember's port of the RTMidi library for Godot](https://github.com/NullMember/godot-rtmidi/releases)!
 
 Currently, the tool is very much in a stable, alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. It works well, within the limited functions currently present.
 
