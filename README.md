@@ -24,13 +24,14 @@ Drawing:
 - Display current pixels on device (one-shot)
 - Display real-time (persistently show any changes immediately on device, including frame changes)
   
-Animation:
+Animation/timeline:
 - Play and pause the timeline.
 - New frame after current.
 - New frame at end of timeline.
 - Duplicate current frame.
 - Delete current frame.
 - Real-time animation display on device.
+- Indicator dot for populated vs empty frame.
 
 MIDI
 - Assign MIDI output port (app will refresh when new ports appear on the system)
@@ -64,3 +65,23 @@ MIDI functions:
    SHIFT+ENTER : Toggle MIDI pixel mirror— this transmits all pixel/frame changes to device in real-time. (wacom mode)
    SHIFT+SPACE : Toggle MIDI timeline mirror— transmits only timeline output to device as it plays.
    </pre>
+
+
+What I intend for this to do in the future:
+UI
+- An actual, properly conceived GUI, with all functions available using coherent iconography.
+- Auto adjustment for pixel size / aspect ratio, depending on the current device type (for example, TG300 has nearly square pixels, while XG devices mostly have double-width).
+- Assign background color, depending on device type. (Green / Orange / other??).
+  
+File handling:
+- Import/Export GIF
+- Import/Export images & image sequences in various formats
+- import/Export .syx containing bitmap messages
+  
+MIDI Control:
+- Trigger on Note — on an instantiated virtual MIDI port, map received MIDI note input to corresponding frame number and display it.
+- Shift pixels — on MIDI CC, move and wrap current pixels on X or Y axis in either direction.
+- Velocity Shift — Switch current frame from frame 1->last available frame, dependent on note velocity. (scale velocity across total number of frames)
+- Some other, less clearly formed ideas.
+- MIDI 2.0 CI profile, so anything can see its capabilties in ze pixels, cuz fuck yeah.
+  
