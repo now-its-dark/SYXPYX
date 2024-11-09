@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce485w18y5ad1"]
+
+[ext_resource type="Script" path="res://PixelCanvas.gd" id="1_rwtv5"]
+
+[node name="PixelCanvas" type="Node2D"]
+script = ExtResource("1_rwtv5")

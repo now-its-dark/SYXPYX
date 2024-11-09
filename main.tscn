@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://daesoknywn8ra"]
+
+[ext_resource type="PackedScene" uid="uid://ce485w18y5ad1" path="res://PixelCanvas.tscn" id="1_jmmiw"]
+[ext_resource type="PackedScene" uid="uid://b4wmem13apxb3" path="res://MenuOverlay.tscn" id="2_7s0n4"]
+[ext_resource type="Script" path="res://InputHandler.gd" id="4_076a8"]
+[ext_resource type="Script" path="res://MidiManager.gd" id="5_43ggs"]
+[ext_resource type="Script" path="res://MessageHandler.gd" id="5_fq671"]
+
+[node name="MAIN" type="Node"]
+
+[node name="PixelCanvas" parent="." instance=ExtResource("1_jmmiw")]
+
+[node name="MenuOverlay" parent="." instance=ExtResource("2_7s0n4")]
+
+[node name="MessageHandler" type="Node" parent="."]
+script = ExtResource("5_fq671")
+
+[node name="InputHandler" type="Node" parent="."]
+script = ExtResource("4_076a8")
+
+[node name="MidiManager" type="Node" parent="."]
+script = ExtResource("5_43ggs")

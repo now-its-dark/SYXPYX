@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4wmem13apxb3"]
+
+[ext_resource type="Script" path="res://MenuOverlay.gd" id="1_l7wlr"]
+
+[node name="menu_overlay" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_l7wlr")
+
+[node name="Menu Container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 133.0
+offset_bottom = 50.0
+
+[node name="MIDI Settings" type="Label" parent="Menu Container"]
+layout_mode = 2
+text = "MIDI Settings"
+
+[node name="Port Selection" type="HBoxContainer" parent="Menu Container"]
+layout_mode = 2
+
+[node name="Output Port Label" type="Label" parent="Menu Container/Port Selection"]
+layout_mode = 2
+text = "Output Port:"
+
+[node name="Port Selector" type="OptionButton" parent="Menu Container/Port Selection"]
+layout_mode = 2
+
+[node name="Device Selection" type="HBoxContainer" parent="Menu Container"]
+layout_mode = 2
+
+[node name="Device Type Label" type="Label" parent="Menu Container/Device Selection"]
+layout_mode = 2
+text = "Device Type"
+
+[node name="Device Selector" type="OptionButton" parent="Menu Container/Device Selection"]
+layout_mode = 2
+
+[node name="Keymap Selection" type="HBoxContainer" parent="Menu Container"]
+layout_mode = 2
+
+[node name="Keymap Label" type="Label" parent="Menu Container/Keymap Selection"]
+layout_mode = 2
+text = "Keymap"
