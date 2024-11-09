@@ -17,7 +17,9 @@ Limitations / High-priority features that it lacks at the moment
 - Any form of file handling
 - MIDI input
 - Decent UI design
-
+- Frame Rate setting
+- "hold" frames (so screen is not blanked, but pixels are also no transmitted)
+  
 ## Available functions
 
 User input:
