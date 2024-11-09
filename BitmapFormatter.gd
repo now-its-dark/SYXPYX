@@ -1,4 +1,4 @@
-# pyxels2Syxels.gd
+# BitapFormatter.gd
 class_name BitmapFormatter
 
 # Static helper function for Roland-style checksum
