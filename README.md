@@ -9,6 +9,8 @@ Perhaps this dearth of usable tools was due to the fact that the people who woul
 
 This tool is made possible by [NullMember's port of the RTMidi library for Godot](https://github.com/NullMember/godot-rtmidi/releases)!
 
+If you want to try this, you'll need to grab their extension and place it in the project folder, as described in their repo.
+
 Currently, the tool is in a stable, alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. It works well, within the limited functions currently present.
 
 What is *missing...*
