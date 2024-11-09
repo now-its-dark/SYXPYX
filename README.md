@@ -21,7 +21,7 @@ Drawing:
 - Erase pixel tool
 - Clear all pixels from current frame (does not delete the frame)
 - Display current pixels on device (one-shot)
-- Display real-time (show any changes immediately on device, including frame changes)
+- Display real-time (persistently show any changes immediately on device, including frame changes)
   
 Animation:
 - New frame after current.
