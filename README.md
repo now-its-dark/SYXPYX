@@ -101,4 +101,4 @@ Visualizers:
 - Region activation - display activity state for individual notes, for things like drum sounds, which are not represented on the device ordinarily.
 
 Optimization:
-- Right now, it just sends the entire message every time. This is not necessary, as pixels can be transmitted discretely, but it's additional logic that doesn't exist yet. Partly, because there is a balance to be struck— if numerous single pixel changes must transmitted, it could end up being less efficient in some cases, due to the additional bytes needed to setup the message.
+- Right now, it just sends the entire message every time. This is not necessary, as pixels can be transmitted discretely, but it's additional logic that doesn't exist yet. Partly, because there is a balance to be struck— if numerous single pixel changes must transmitted, it could end up being less efficient in some cases, due to the additional bytes needed to setup each message.
