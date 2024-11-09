@@ -77,7 +77,8 @@ UI
 File handling:
 - Import/Export GIF
 - Import/Export images & image sequences in various formats
-- import/Export .syx containing bitmap messages
+- Import/Export .syx containing bitmap messages
+- Export timed MIDI data, with *separate* settings for FPS and BPM.
   
 MIDI Control:
 - Trigger on Note — on an instantiated virtual MIDI port, map received MIDI note input to corresponding frame number and display it.
@@ -85,4 +86,6 @@ MIDI Control:
 - Velocity Shift — Switch current frame from frame 1->last available frame, dependent on note velocity. (scale velocity across total number of frames)
 - Some other, less clearly formed ideas.
 - MIDI 2.0 CI profile, so anything can see its capabilties in ze pixels, cuz fuck yeah.
-  
+
+Optimization:
+- Right now, it just sends the entire message every time. This is not necessary, as pixels can be transmitted discretely, but it's additional logic that doesn't exist yet. Partly, because there is a balance to be struck— if numerous single pixel changes must transmitted, it could end up being less efficient in some cases, due to the additional bytes needed to setup the message.
