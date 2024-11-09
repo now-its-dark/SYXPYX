@@ -40,6 +40,12 @@ MIDI
 - Assign bitmap standard (XG, SC-55, TG300)
 - Stores the current port name in use, in case of a disconnect, then refreshes the connection and opens the port if device reconnects.
 
+What is *missing...*
+
+- Any form of file handling
+- MIDI input
+- A decent UI design
+- 
 <pre>
 Default Keymap:
 (currently implemented)
