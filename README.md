@@ -8,7 +8,7 @@ My guess, is that the main reason why very few people bothered with this capabil
 This tool uses [NullMember's port of the RTMidi library for Godot](https://github.com/NullMember/godot-rtmidi/releases)!
 If you want to try it out, you'll need to grab this extension and place it in the project folder, as described in their repo. I'll link it properly to this repo at some point.
 
-Current Status
+## Current Status
 
 The tool is in a pretty stable alpha state (oxymoron?!)— it supports SC-55, XG (Display:Bitmap) and TG300 (virtually the same as XG, with a different address and using Roland checksum), but not the memory pages used by the 88 Pro, or the fancier displays on the NS5X series or the SC8850. I've made an effort to squash any bugs that appeared, so it is generally usable, within the limits of the current featureset. I got a lot of help from LLMs to make it, as my experience with Godot is limited rn, but the code is structured in a pretty modular way.
 
@@ -18,7 +18,7 @@ Limitations / High-priority features that it lacks at the moment
 - MIDI input
 - Decent UI design
 
-Available functions
+## Available functions
 
 User input:
 Mostly keyboard-based, other than for drawing operations— nearly every function has an associated key command, which can be reassigned via the native key mapping in Godot.
@@ -47,10 +47,9 @@ MIDI
 - Assign bitmap standard (XG, SC-55, TG300)
 - Stores the current port name in use, in case of a disconnect, then refreshes the connection and opens the port if device reconnects.
 
+## Keymap:
+These are the default mappings, they can be changed.
 <pre>
-Default Keymap:
-(currently implemented)
-
 system functions
            esc : toggle menu
 
@@ -76,7 +75,7 @@ MIDI functions:
    </pre>
 
 
-Planned Future additions
+## Planned Future additions
 
 UI
 - An actual, properly conceived GUI, with all functions available using coherent iconography.
